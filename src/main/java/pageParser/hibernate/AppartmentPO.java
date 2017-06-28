@@ -15,6 +15,8 @@ public class AppartmentPO {
     private String rooms;
     @Column(name = "adress")
     private String adress;
+    @Column(name = "taxi")
+    private String taxi;
 
 
     public String getRooms() {
@@ -41,6 +43,14 @@ public class AppartmentPO {
         this.id = id;
     }
 
+    public String getTaxi() {
+        return taxi;
+    }
+
+    public void setTaxi(String taxi) {
+        this.taxi = taxi;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -62,6 +72,7 @@ public class AppartmentPO {
                 "id='" + id + '\'' +
                 ", rooms='" + rooms + '\'' +
                 ", adress='" + adress + '\'' +
+                ", taxi='" + taxi + '\'' +
                 "}\n";
     }
 }

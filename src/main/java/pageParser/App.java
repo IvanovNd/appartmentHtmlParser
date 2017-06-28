@@ -24,6 +24,7 @@ public class App {
                 appartment = isAppartment(line, appartment);
                 if (appartment) {
                     if (line.contains("Комиссия")) {
+                        newAppartment.setTaxi(line);
                         br.readLine();
                     } else if (line.contains("к.кв.")) {
                         newAppartment = new AppartmentPO();
