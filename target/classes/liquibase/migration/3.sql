@@ -1,0 +1,1 @@
+Alter TABLE APP add distance varchar2(255);

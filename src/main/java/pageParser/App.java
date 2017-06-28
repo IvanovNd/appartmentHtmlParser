@@ -19,6 +19,7 @@ public class App {
             boolean appartment = false;
             Set<AppartmentPO> appartmentList = new HashSet<>();
             AppartmentPO newAppartment = new AppartmentPO();
+            boolean adressparsStart = false;
             while (line != null) {
                 //определяет начало и конец списка квартир
                 appartment = isAppartment(line, appartment);
@@ -34,6 +35,12 @@ public class App {
                     } else if (line.contains("д.")) {
                         newAppartment.setAdress(line);
                         appartmentList.add(newAppartment);
+                    } else if (line.contains("на карте смотреть на карте")) {
+                            adressparsStart = true;
+                    } else if (adressparsStart && line.contains("м.")) {
+                        adressparsStart = false;
+                    } else if (adressparsStart) {
+                        newAppartment.setDistance(newAppartment.getDistance()+ ", " + line);
                     }
                 }
                 line = br.readLine();
