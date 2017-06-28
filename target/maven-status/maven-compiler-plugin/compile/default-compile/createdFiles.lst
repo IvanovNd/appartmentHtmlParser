@@ -1,0 +1,6 @@
+pageParser\mail\EmailSender.class
+pageParser\hibernate\AppartmentPO.class
+pageParser\mail\Property$1.class
+pageParser\mail\Property.class
+pageParser\hibernate\HibernateUtil.class
+pageParser\App.class
